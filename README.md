@@ -14,7 +14,6 @@ Execute the bootstrap.sh file
 
 **Commands**
 ```console
-release.manager@salesforce:~$ 
 release.manager@salesforce:~$ curl -Ls https://github.com/scolladon/sfdc-git-merge-driver/tarball/43f2 > sfdc-git-merge-driver.tar
 release.manager@salesforce:~$ mkdir sfdc-git-merge-driver
 release.manager@salesforce:~$ tar -xf sfdc-git-merge-driver.tar -C sfdc-git-merge-driver --strip-components 1
