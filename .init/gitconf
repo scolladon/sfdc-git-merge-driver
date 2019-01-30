@@ -1,0 +1,8 @@
+
+[merge "merge-profiles"]
+  name = A custom merge driver for Salesforce profiles
+  driver = groovy .git/scripts/sf_merge/merge_profiles.groovy %O %A %B .git/scripts/sf_merge
+  recursive = binary
+[merge "merge-packages"]
+  name = A custom merge driver for Salesforce package.xml
+  driver = smp -p %A -p %B -o %A

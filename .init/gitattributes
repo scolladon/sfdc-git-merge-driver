@@ -1,0 +1,6 @@
+*.profile merge=merge-profiles
+*.permissionset merge=merge-profiles
+package.xml merge=merge-packages
+destructiveChangesPost.xml merge=merge-packages
+destructiveChangesPre.xml merge=merge-packages
+destructiveChanges.xml merge=merge-packages
