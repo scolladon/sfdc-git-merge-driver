@@ -34,4 +34,4 @@ this project follow the instructions in [git-merge-driver](https://github.com/Pr
 Simply use the awesome [sfdc_merge](https://github.com/amguerrero/sfdc_merge) merge git driver
 
 ### Package.xml like
-USe the tool [sfdc-merge-package](https://github.com/scolladon/sfdc-merge-package) to create a custom merge driver
+Use the tool [sfdc-merge-package](https://github.com/scolladon/sfdc-merge-package) to create a custom merge driver
