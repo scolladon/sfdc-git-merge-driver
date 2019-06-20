@@ -4,10 +4,6 @@
 type groovy >/dev/null 2>&1 || { echo >&2 "Install groovy first: http://groovy-lang.org/documentation.html.  Aborting."; exit 1; }
 type smp >/dev/null 2>&1 || { echo >&2 "Install smp first (npm install -g sfdc-merge-package): https://github.com/scolladon/sfdc-merge-package.  Aborting."; exit 1; }
 echo "#bootstrap: requirement check done"
-curl -Ls https://github.com/KevinGossentCap/sfdc_merge/tarball/398397c > sfdc_merge.latest.tar
-mkdir sfdc_merge.latest
-tar -xf sfdc_merge.latest.tar -C sfdc_merge.latest --strip-components 1
-echo "#bootstrap: download & install dependencies done"
 mkdir ../.git/scripts
 cp -R sfdc_merge.latest/ ../.git/scripts/sf_merge
 rm -rf sfdc_merge.latest sfdc_merge.latest.tar
