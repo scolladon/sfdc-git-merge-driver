@@ -6,7 +6,6 @@ type smp >/dev/null 2>&1 || { echo >&2 "Install smp first (npm install -g sfdc-m
 echo "#bootstrap: requirement check done"
 mkdir ../.git/scripts
 cp -R sfdc_merge.latest/ ../.git/scripts/sf_merge
-rm -rf sfdc_merge.latest sfdc_merge.latest.tar
 cat gitconf >> ../.git/config
 echo "#bootstrap: install custom driver in git config done"
 mkdir ../.git/info
