@@ -7,6 +7,10 @@
 		"uniqueKeys" : [ "apexClass" ],
 		"equalKeys"  : [ "apexClass", "enabled" ]
 	},
+	"customMetadataTypeAccesses" : {
+		"uniqueKeys" : [ "name" ],
+		"equalKeys"  : [ "name", "enabled" ]
+	},
 	"customPermissions" : {
 		"uniqueKeys" : [ "name" ],
 		"equalKeys"  : [ "name", "enabled" ]

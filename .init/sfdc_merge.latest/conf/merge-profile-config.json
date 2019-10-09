@@ -11,6 +11,10 @@
 		"uniqueKeys" : [ "apexClass" ],
 		"equalKeys"  : [ "apexClass", "enabled" ]
 	},
+	"customMetadataTypeAccesses" : {
+		"uniqueKeys" : [ "name" ],
+		"equalKeys"  : [ "name", "enabled" ]
+	},
 	"customPermissions" : {
 		"uniqueKeys" : [ "name" ],
 		"equalKeys"  : [ "name", "enabled" ]
@@ -18,6 +22,10 @@
 	"externalDataSourceAccesses" : {
 		"uniqueKeys" : [ "externalDataSource" ],
 		"equalKeys"  : [ "externalDataSource", "enabled" ]
+	},
+	"fieldLevelSecurities" : {
+		"uniqueKeys" : [ "field" ],
+		"equalKeys"  : [ "field", "editable", "hidden", "readable" ]
 	},
 	"fieldPermissions" : {
 		"uniqueKeys" : [ "field" ],
@@ -44,6 +52,10 @@
 	"pageAccesses" : {
 		"uniqueKeys" : [ "apexPage" ],
 		"equalKeys"  : [ "apexPage", "enabled" ]
+	},
+	"profileActionOverrides" : {
+		"uniqueKeys" : [ "actionName", "type", "pageOrSobjectType", "formFactor" ],
+		"equalKeys"  : [ "actionName", "type", "pageOrSobjectType", "formFactor", "content" ]
 	},
 	"recordTypeVisibilities" : {
 		"uniqueKeys" : [ "recordType" ],
