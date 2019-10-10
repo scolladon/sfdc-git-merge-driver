@@ -136,6 +136,15 @@ def buildUniqueKey(def node, def nodeTypeConfig) {
 
 			uniqueKey += exclusiveUniqueKey
 		}
+	} else {
+		uniqueKey = node.name().localPart + "#"
+		node.children().each { child ->
+			if (child.getClass() == groovy.util.Node) {
+				uniqueKey += child.value()[0] + "#"
+			} else {
+				uniqueKey += child + "#"
+			}
+		}
 	}
 
 	uniqueKey
@@ -157,6 +166,13 @@ def areNodesEqual(def node1, def node2, def nodeTypeConfig) {
 
 	if (nodeTypeConfig && nodeTypeConfig.equalKeys && !nodeTypeConfig.equalKeys.isEmpty()) {
 		for (def key : nodeTypeConfig.equalKeys) {
+			if (node1."$key"[0] && node1."$key"[0].value()[0] != node2.node."$key"[0].value()[0]) {
+				return false
+			}
+		}
+		return true
+	} else if (!nodeTypeConfig && node1.getClass() == groovy.util.Node && node2.node.getClass() == groovy.util.Node) {
+		for (def key : node1.children()) {
 			if (node1."$key"[0] && node1."$key"[0].value()[0] != node2.node."$key"[0].value()[0]) {
 				return false
 			}
